@@ -1,20 +1,10 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
 import sqlite3
 from werkzeug.exceptions import abort
-from connexion import donateurs
-from flask_user import login_required, UserManager, UserMixin
+from connexion import donateurs, membres
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
-
-#test authentification
-# Flask-User settings
-USER_APP_NAME = "Flask-User MongoDB App"      # Shown in and email templates and page footers
-USER_ENABLE_EMAIL = False      # Disable email authentication
-USER_ENABLE_USERNAME = True    # Enable username authentication
-USER_REQUIRE_RETYPE_PASSWORD = False    # Simplify register form
-
-
 
 @app.route('/')
 def index():
@@ -45,7 +35,24 @@ def form_don():
 def chanson():
     return render_template('chanson.html') 
 
+@app.route('/login', methods = ('GET', 'POST'))
+def login():
+    login = membres.find({})
+    b=(list(membres.find({})))
+    password = (b[0]['password'])
+    login = (b[0]['login'])
+    log_user =request.values.get('login')
+    pass_user = request.values.get('password')
+
+    if log_user == login and pass_user == password:        
+        l_donateurs = donateurs.find({})
+        a = list(donateurs.aggregate([ {"$group": {"_id": "null","Total": {"$sum": "$somme"}}} ] ))
+        dons_tot = (a[0]['Total'])
+        return render_template('liste.html', donateurs=l_donateurs, dons_tot=dons_tot)      
+    else :
+        return render_template('login.html')
 @app.route('/liste', methods = ['GET'])
+#@login_required
 def liste():
     l_donateurs = donateurs.find({})
     a = list(donateurs.aggregate([ {"$group": {"_id": "null","Total": {"$sum": "$somme"}}} ] ))
@@ -54,4 +61,4 @@ def liste():
 
 @app.route('/merci')
 def merci():
-    return render_template('merci.html') 
+    return render_template('merci.html')

@@ -17,6 +17,6 @@ CONNECTION_STRING ='mongodb+srv://Aude:coucou@clusterdon.ngy1c.mongodb.net/sauve
 client = pymongo.MongoClient(CONNECTION_STRING)
 db = client.get_database('sauver_rolistes')
 donateurs = db.donateurs
+membres = db.membres
 
-a = list(donateurs.aggregate([ {"$group": {"_id": "null","Total": {"$sum": "$somme"}}} ] ))
-dons_tot = (a[0]['Total'])
+#({"login":"admin", "password": "admin"})
