@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %} Faites un don {% endblock %}</h1>
+
+<form method="post">
+
+    <div>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom_donneur">
+    </div>
+
+    <div>
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom_donneur">
+    </div>
+
+    <div>
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse_donneur">
+    </div>
+
+    <div>
+        <label for="mail">E-mail :</label>
+        <input type="email" id="mail" name="mail_donneur">
+    </div>
+
+    <div>
+        <label for="somme">Promesse de don (en k€) : </label>
+        <input type="number" id="somme" name="somme">
+    </div>
+
+    <div>
+        <label id="condit" for="conditions">J'ai compris et je valide les conditions d'utilisation et m'engage corps et âme à aider les rôlistes, jusqu'à ce que la mort nous sépare, et je paierais cette somme chaque annéé, sinon, je retrouverais une tête de cheval dans mon lit un matin</label>
+        <input type="checkbox" value="Oui" name="conditions" id="conditions" />        
+    </div>
+   
+    <div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+    </div>
+
+</form>
+
+{% endblock %}

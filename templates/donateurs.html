@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %} Nos généreux donateurs {% endblock %}</h1>
+
+{% for donateur in donateurs %}
+<div class="menu">
+
+    <span class="badge badge-primary">{{ donateur['nom'] }}</span>
+    <hr>
+</div>    
+{% endfor %}
+
+{% endblock %}

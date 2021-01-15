@@ -1,0 +1,132 @@
+
+
+h1 {
+    border: 2px #eee solid;
+    color: rgb(177, 94, 0);
+    text-align: center;
+    padding: 10px;
+    background-image: url('');
+}
+
+body{
+    text-align: center;
+    font-family: ;
+    margin-left:0 auto;
+    margin-right:0 auto;
+    background-size: cover;
+    background-position: center;
+    font-size: x-large;
+    
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                  url("https://www.geekzone.fr/wp-content/uploads/2020/04/cube-568059_1280.jpg");
+   
+}
+
+form {
+    /* Uniquement centrer le formulaire sur la page */
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 800px;
+    /* Encadré pour voir les limites du formulaire */
+    padding: 2em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("https://cdn.tomshardware.fr/content/uploads/sites/3/2018/12/diaporama-50-meilleurs-jeux-de-rle.jpg");
+    
+  }
+  
+  form div + div {
+    margin-top: 0.5em;
+  }
+  
+  label {
+    /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+  }
+  
+  input, textarea {
+    /* Pour s'assurer que tous les champs texte ont la même police.
+       Par défaut, les textarea ont une police monospace */
+    font: 1em sans-serif;
+  
+    /* Pour que tous les champs texte aient la même dimension */
+    width: 300px;
+    box-sizing: border-box;
+  
+    /* Pour harmoniser le look & feel des bordures des champs texte */
+    border: 1px solid #999;
+  }
+  
+  input:focus, textarea:focus {
+    /* Pour souligner légèrement les éléments actifs */
+    border-color: #000;
+  }
+  
+  textarea {
+    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+    vertical-align: top;
+  
+    /* Pour donner assez de place pour écrire du texte */
+    height: 5em;
+  }
+  
+  .button {
+    /* Pour placer le bouton à la même position que les champs texte */
+    padding-left: 90px; /* même taille que les étiquettes */
+  }
+  
+  button {
+    /* Cette marge supplémentaire représente grosso modo le même espace que celui
+       entre les étiquettes et les champs texte */
+    margin-left: .5em;
+
+  }
+  #condit{
+    font-size: 0.3em ;
+  }
+ .paroles{
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+    }
+
+h1{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7)),
+    url("https://sen.flam.me/forum/uploads/monthly_2018_06/image.png.d28438d01f6aaa53a8e4d9d99634f454.png");
+    background-position: center;
+    min-height: 250px;
+    padding-top: 100px;
+    text-align: center;
+    align-items: center;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+
+.badge{
+height: 2em;
+width: 10em;
+font-size: medium;
+color: rgb(6, 245, 6);
+
+}
+
+.merci{
+font-size: xx-large;
+color: rgb(177, 94, 0);
+padding-top: 4%;
+text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+background-image: url('https://static.vecteezy.com/ti/vecteur-libre/p1/692924-fond-coeur-rose-saint-valentin-cadre-blanc-et-forme-de-coeur-en-papier-decoupe-gratuit-vectoriel.jpg');
+height: 6em;
+}
+
+#hop{  
+  color: rgb(255, 0, 170);
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}

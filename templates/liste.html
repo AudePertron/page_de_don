@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %} Nos généreux donateurs {% endblock %}</h1>
+
+<span class="badge badge-primary" id="hop">Nom</span>
+<span class="badge badge-primary" id="hop">Prénom</span>
+<span class="badge badge-primary" id="hop">Somme </span>
+<hr>
+{% for donateur in donateurs %}
+<div class="menu">
+
+    <span class="badge badge-primary">{{ donateur['nom'] }}</span>
+    <span class="badge badge-primary">{{ donateur['prenom'] }}</span>
+    <span class="badge badge-primary">{{ donateur['somme'] }} k€ </span>
+    <hr>
+</div>    
+{% endfor %}
+
+<p >Le total des dons s'élève à : {{ dons_tot }} k€</p>
+
+{% endblock %}
